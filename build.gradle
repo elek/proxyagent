@@ -1,0 +1,26 @@
+buildscript {
+   repositories {
+     maven {
+       url "https://repository-anzix.forge.cloudbees.com/snapshot"
+     }
+     mavenCentral()
+   }
+   dependencies {
+       classpath 'net.anzix.build:gradle-plugins:1.0-SNAPSHOT'   
+   }
+}
+
+repositories { 
+  mavenCentral()
+}
+apply plugin: 'pmd'
+apply plugin: 'build-dashboard'
+apply plugin: 'checkstyle'
+apply plugin: 'java'
+apply plugin: 'anzix-quality'
+
+jar {
+    manifest {
+        attributes("Premain-Class": "net.anzix.proxyagent.Agent")
+    }
+}

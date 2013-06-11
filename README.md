@@ -1,0 +1,1 @@
+Simple agent which sets static Authenticator to use [http|https].proxy(User|Password) environment variables.
