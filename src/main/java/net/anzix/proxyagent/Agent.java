@@ -20,7 +20,7 @@ public class Agent {
 
     public static void premain(String agentArgs, Instrumentation inst) {
 
-        // Java ignores http.proxyUser. Here come's the workaround.
+        // Java ignores http.proxyUser. Here comes the workaround.
         Authenticator.setDefault(new Authenticator() {
             @Override
             protected PasswordAuthentication getPasswordAuthentication() {
